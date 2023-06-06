@@ -3,6 +3,7 @@ package com.example.myapplication5;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,13 +14,14 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-//import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+//import androidx.appcompat.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
     AlertDialog.Builder builder;
-    String[] country = { "India", "USA", "China", "Japan", "Other"};
+    String[] country = {"India", "USA", "China", "Japan", "Other"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,13 +85,29 @@ public class MainActivity extends AppCompatActivity {
         autoCompleteTextView.setAdapter(arrayAdapter1);
 
 
-        Button changeActivity = findViewById(R.id.change_activity);
+        Button changeActivity = findViewById(R.id.change_activity_2);
         changeActivity.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             intent.putExtra("name", "Value from activity 1");
             startActivity(intent);
         });
 
+        Button gotoActivity3 = findViewById(R.id.change_activity_3);
+        gotoActivity3.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+            startActivity(intent);
+        });
 
+        Button gotoActivity4 = findViewById(R.id.change_activity_4);
+        gotoActivity4.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity4.class);
+            startActivity(intent);
+        });
+
+        Button button5 = findViewById(R.id.change_activity_5);
+        button5.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity5.class);
+            startActivity(intent);
+        });
     }
 }
