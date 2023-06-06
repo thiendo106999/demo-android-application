@@ -33,7 +33,9 @@ public class MainActivity2 extends AppCompatActivity {
             articles.add(article);
         }
 
-        ArticleAdapter articleAdapter = new ArticleAdapter(articles);
+        ArticleAdapter articleAdapter = new ArticleAdapter(this, articles, position -> {
+            Toast.makeText(this, "Click " + position, Toast.LENGTH_SHORT).show();
+        });
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(articleAdapter);

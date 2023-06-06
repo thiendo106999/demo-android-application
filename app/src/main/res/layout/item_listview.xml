@@ -12,6 +12,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/content"
         android:text="akakk"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"/>
 
     <TextView

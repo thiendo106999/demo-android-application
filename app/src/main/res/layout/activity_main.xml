@@ -93,20 +93,37 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/change_activity"
+        android:id="@+id/change_activity_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Goto Activity 2" />
 
+    <Button
+        android:id="@+id/change_activity_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goto Activity 3" />
+    <Button
+        android:id="@+id/change_activity_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goto Activity 4" />
+
+    <Button
+        android:id="@+id/change_activity_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intent example" />
+
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.example.myapplication5.Fragment1"
+        android:name="com.example.myapplication5.fragments.Fragment1"
         android:layout_width="match_parent"
         android:layout_height="100dp" />
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.example.myapplication5.Fragment2"
+        android:name="com.example.myapplication5.fragments.Fragment2"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 </LinearLayout>
