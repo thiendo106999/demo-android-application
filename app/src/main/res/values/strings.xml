@@ -17,4 +17,6 @@
         <item>.Net</item>
         <item>Perl</item>
     </string-array>
+
+    <string name="content">The layout for the each view item is defined in an XML layout file, as usual. In this case, the app has a text_row_item.xml file like this:</string>
 </resources>
