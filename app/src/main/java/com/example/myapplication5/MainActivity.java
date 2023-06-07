@@ -109,5 +109,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, MainActivity5.class);
             startActivity(intent);
         });
+
+        Button button6 = findViewById(R.id.change_activity_6);
+        button6.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity6.class);
+            startActivity(intent);
+        });
     }
 }

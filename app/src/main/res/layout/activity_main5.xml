@@ -7,8 +7,26 @@
     tools:context=".MainActivity5">
 
     <Button
+        android:id="@+id/share_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/share_button"
-        android:text="share intent"/>
+        android:text="share intent" />
+
+    <Button
+        android:id="@+id/share_open_web"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Open google" />
+
+    <Button
+        android:id="@+id/open_camera"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Open camera" />
+
+    <ImageView
+        android:id="@+id/imv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        />
 </LinearLayout>
