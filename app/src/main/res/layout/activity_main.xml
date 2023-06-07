@@ -96,24 +96,30 @@
         android:id="@+id/change_activity_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Goto Activity 2" />
+        android:text="RecyclerView" />
 
     <Button
         android:id="@+id/change_activity_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Goto Activity 3" />
+        android:text="Date and time picker" />
+
     <Button
         android:id="@+id/change_activity_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Goto Activity 4" />
+        android:text="Tab layout and custom edit text" />
 
     <Button
         android:id="@+id/change_activity_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Intent example" />
+    <Button
+        android:id="@+id/change_activity_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GSON" />
 
     <fragment
         android:id="@+id/fragment1"
