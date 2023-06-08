@@ -2,6 +2,7 @@ package com.example.myapplication5;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,12 +17,15 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//import androidx.appcompat.app.AlertDialog;
-
 public class MainActivity extends AppCompatActivity {
 
     AlertDialog.Builder builder;
     String[] country = {"India", "USA", "China", "Japan", "Other"};
+    SharedPreferences sharedPreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "nameKey";
+    public static final String Phone = "phoneKey";
+    public static final String Email = "emailKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +117,24 @@ public class MainActivity extends AppCompatActivity {
         Button button6 = findViewById(R.id.change_activity_6);
         button6.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MainActivity6.class);
+            startActivity(intent);
+        });
+
+        Button button7 = findViewById(R.id.change_activity_7);
+        button7.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity7.class);
+            startActivity(intent);
+        });
+
+        sharedPreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Name, "Thien Thien");
+        editor.putString(Phone, "0101010101010");
+        editor.putString(Email, "thien@gmail.com");
+        editor.apply();
+        Button button8 = findViewById(R.id.change_activity_8);
+        button8.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity8.class);
             startActivity(intent);
         });
     }
